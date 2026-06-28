@@ -1,3 +1,5 @@
+> **Landing page:** https://KennyWayn3.github.io/crewai-mcp-servers/
+
 # CrewAI MCP Servers & Skills
 
 Production-ready MCP servers and CrewAI skills for AI agents. Built by AI, for AI.
