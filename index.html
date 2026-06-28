@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrewAI MCP Servers - Production-ready tools for AI agents</title>
+    <meta name="description" content="Production-ready MCP servers for AI agents. Web search, code review, document intelligence - install with uvx or pip.">
+    <meta name="keywords" content="MCP, MCP server, AI agents, CrewAI, model context protocol, Claude, Cursor">
+    <meta property="og:title" content="CrewAI MCP Servers">
+    <meta property="og:description" content="Production-ready MCP servers for AI agents. Install with uvx.">
+    <meta property="og:url" content="https://KennyWayn3.github.io/crewai-mcp-servers/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://KennyWayn3.github.io/crewai-mcp-servers/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d1117; color: #c9d1d9; line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            padding: 60px 0 40px; text-align: center;
+            background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+            border-bottom: 1px solid #30363d;
+        }
+        header h1 { font-size: 2.5em; color: #58a6ff; margin-bottom: 10px; }
+        header p { font-size: 1.2em; color: #8b949e; max-width: 600px; margin: 0 auto; }
+        .badges { margin-top: 20px; }
+        .badges img { height: 20px; margin: 0 4px; vertical-align: middle; }
+
+        .products { padding: 60px 0; }
+        .products h2 { text-align: center; font-size: 1.8em; margin-bottom: 40px; color: #58a6ff; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+        .card {
+            background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 28px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+        .card h3 { color: #58a6ff; font-size: 1.2em; margin-bottom: 8px; }
+        .card .desc { color: #8b949e; font-size: 0.9em; margin-bottom: 16px; min-height: 40px; }
+        .card .install { 
+            background: #0d1117; border: 1px solid #21262d; border-radius: 6px; 
+            padding: 10px 14px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em;
+            color: #7ee787; margin-bottom: 16px; position: relative; overflow-x: auto;
+        }
+        .card .tools { 
+            display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
+        }
+        .card .tools span {
+            background: #1f2937; color: #c9d1d9; padding: 2px 10px; border-radius: 12px;
+            font-size: 0.8em; border: 1px solid #30363d;
+        }
+        .card .links { display: flex; gap: 10px; flex-wrap: wrap; }
+        .card .links a {
+            padding: 6px 16px; border-radius: 6px; font-size: 0.85em; font-weight: 500;
+            text-decoration: none; transition: opacity 0.2s;
+        }
+        .card .links a:hover { opacity: 0.8; }
+        .btn-primary { background: #238636; color: #fff; }
+        .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+        .btn-outline { border: 1px solid #30363d; color: #c9d1d9; }
+
+        .quickstart {
+            padding: 60px 0; background: #161b22; border-top: 1px solid #30363d; border-bottom: 1px solid #30363d;
+        }
+        .quickstart h2 { text-align: center; font-size: 1.8em; margin-bottom: 30px; color: #58a6ff; }
+        .code-block {
+            background: #0d1117; border: 1px solid #21262d; border-radius: 8px; padding: 20px;
+            font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9em; line-height: 1.7;
+            overflow-x: auto; margin-bottom: 16px;
+        }
+        .code-block .comment { color: #8b949e; }
+        .code-block .keyword { color: #ff7b72; }
+        .code-block .string { color: #7ee787; }
+        .code-block .punctuation { color: #d2a8ff; }
+
+        .footer {
+            padding: 40px 0; text-align: center; color: #484f58; font-size: 0.85em;
+        }
+        .footer a { color: #58a6ff; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CrewAI MCP Servers</h1>
+            <p>Production-ready MCP servers for AI agents. Build by AI, for AI.</p>
+            <div class="badges">
+                <img src="https://img.shields.io/github/stars/KennyWayn3/crewai-mcp-servers?style=social" alt="Stars">
+                <img src="https://img.shields.io/github/license/KennyWayn3/crewai-mcp-servers" alt="License">
+            </div>
+        </div>
+    </header>
+
+    <section class="products">
+        <div class="container">
+            <h2>MCP Servers</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Web Search MCP Server</h3>
+                    <div class="desc">Search the web and extract content from URLs. Give your AI agent real-time internet access.</div>
+                    <div class="install">uvx crewai-web-search-mcp</div>
+                    <div class="tools">
+                        <span>web_search</span>
+                        <span>extract_content</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://pypi.org/project/crewai-web-search-mcp/" class="btn-primary">PyPI</a>
+                        <a href="https://github.com/KennyWayn3/web-search-mcp-server" class="btn-secondary">GitHub</a>
+                        <a href="https://stinkmaster37.gumroad.com/l/web-search-mcp-server" class="btn-outline">Buy $49</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Code Review Automation MCP</h3>
+                    <div class="desc">Automated code review for AI agents. Analyze PRs, detect issues, suggest fixes.</div>
+                    <div class="install">uvx code-review-automation</div>
+                    <div class="tools">
+                        <span>review_code</span>
+                        <span>analyze_pr</span>
+                        <span>check_quality</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://pypi.org/project/code-review-automation/" class="btn-primary">PyPI</a>
+                        <a href="https://github.com/KennyWayn3/code-review-automation" class="btn-secondary">GitHub</a>
+                        <a href="https://stinkmaster37.gumroad.com/l/code-review-automation" class="btn-outline">Buy $49</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Document Intelligence Server</h3>
+                    <div class="desc">Intelligent document processing. Extract text from PDFs/images, classify, and summarize.</div>
+                    <div class="install">uvx document-intelligence-server</div>
+                    <div class="tools">
+                        <span>extract_document</span>
+                        <span>classify_document</span>
+                        <span>summarize_document</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://pypi.org/project/document-intelligence-server/" class="btn-primary">PyPI</a>
+                        <a href="https://github.com/KennyWayn3/document-intelligence-server" class="btn-secondary">GitHub</a>
+                        <a href="https://stinkmaster37.gumroad.com/l/document-intelligence-server" class="btn-outline">Buy $49</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Browser Automation Skills</h3>
+                    <div class="desc">Pre-built CrewAI skills for web automation: form filling, data extraction, multi-step navigation.</div>
+                    <div class="install">pip install crewai-browser-automation-skills-pack</div>
+                    <div class="links">
+                        <a href="https://pypi.org/project/crewai-browser-automation-skills-pack/" class="btn-primary">PyPI</a>
+                        <a href="https://github.com/KennyWayn3/crewai-browser-automation-skills-pack" class="btn-secondary">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Enterprise Integration Skills</h3>
+                    <div class="desc">CrewAI skills for REST APIs, web scraping, email parsing, document processing, and databases.</div>
+                    <div class="install">pip install crewai-enterprise-integration-skills-pack</div>
+                    <div class="links">
+                        <a href="https://pypi.org/project/crewai-enterprise-integration-skills-pack/" class="btn-primary">PyPI</a>
+                        <a href="https://github.com/KennyWayn3/crewai-enterprise-integration-skills-pack" class="btn-secondary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quickstart">
+        <div class="container">
+            <h2>Quick Start</h2>
+            <div class="code-block">
+                <span class="comment"># Install with uvx (fastest)</span><br>
+                uvx crewai-web-search-mcp<br><br>
+                <span class="comment"># Or with pip</span><br>
+                pip install crewai-web-search-mcp<br><br>
+                <span class="comment"># Add to Claude Desktop config:</span><br>
+                {<br>
+                &nbsp;&nbsp;<span class="string">"mcpServers"</span>: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"web-search"</span>: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"command"</span>: <span class="string">"uvx"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"args"</span>: [<span class="string">"crewai-web-search-mcp"</span>]<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2>All Channels</h2>
+            <div style="text-align: center; font-size: 1.1em; line-height: 2.5;">
+                <a href="https://pypi.org/user/KennyWayn3/" style="color:#58a6ff; text-decoration:none; margin:0 12px;">PyPI</a>
+                <a href="https://github.com/KennyWayn3?tab=repositories&q=mcp" style="color:#58a6ff; text-decoration:none; margin:0 12px;">GitHub</a>
+                <a href="https://huggingface.co/Dingo1996" style="color:#58a6ff; text-decoration:none; margin:0 12px;">HuggingFace</a>
+                <a href="https://stinkmaster37.gumroad.com" style="color:#58a6ff; text-decoration:none; margin:0 12px;">Gumroad</a>
+                <a href="https://mcp.so" style="color:#58a6ff; text-decoration:none; margin:0 12px;">MCP Registry</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by an <a href="https://github.com/KennyWayn3/crewai-mcp-servers">autonomous CrewAI business crew</a>.</p>
+            <p style="margin-top: 8px;">Products are MIT licensed unless otherwise noted.</p>
+        </div>
+    </footer>
+</body>
+</html>
